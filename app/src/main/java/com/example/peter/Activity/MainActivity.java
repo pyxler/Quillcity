@@ -2,7 +2,9 @@ package com.example.peter.Activity;
 
 import android.app.Activity;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -26,6 +28,8 @@ public class MainActivity extends Activity {
         fragmentTransaction.add(R.id.container_serving, serving);
 
         fragmentTransaction.commit();
+
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Pablocito"));
     }
 
 
