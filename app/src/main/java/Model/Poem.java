@@ -15,7 +15,6 @@ public class Poem {
     public Poem(String Author, String Text){
         mAuthor = mAuthor;
         mPoem = Text;
-
     }
 
     public String getAuthor(){

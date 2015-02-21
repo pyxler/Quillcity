@@ -10,8 +10,11 @@ public class Rating {
     private int mPos;
     private int mNeut;
 
-    public Rating(){
-
+    public Rating(int views, int neg, int pos, int neut){
+        mViews = views;
+        mNeg = neg;
+        mPos = pos;
+        mNeut = neut;
     }
 
     public int getViews(){

@@ -46,9 +46,20 @@ public class Reader extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
-        return textView;
+
+        return inflater.inflate(R.layout.fragment_reader, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceStates){
+        super.onActivityCreated(savedInstanceStates);
+        TextView username = (TextView) getActivity().findViewById(R.id.reader_username);
+        TextView poem = (TextView) getActivity().findViewById(R.id.reader_poem);
+        TextView rating = (TextView) getActivity().findViewById(R.id.reader_rating);
+
+        username.setText(mPoem.getAuthor());
+        poem.setText(mPoem.getPoem());
+        rating.setText(Integer.toString(mRating.getRating()));
     }
 
 

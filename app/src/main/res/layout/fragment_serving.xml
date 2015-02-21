@@ -2,26 +2,17 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" tools:context="Fragment.Serving">
 
-<<<<<<< HEAD
+
     <FrameLayout
         android:id="@+id/container_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
-=======
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
 
-    <TextView
-        android:text="@string/hello_world"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
->>>>>>> d44d6134559433398494f259c93ddf8323264ef1
-<!--
     <FrameLayout
         android:id="@+id/container_reader"
-        /> -->
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </android.support.v4.widget.SlidingPaneLayout>

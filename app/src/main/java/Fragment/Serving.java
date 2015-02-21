@@ -1,6 +1,7 @@
 package Fragment;
 
 
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.view.LayoutInflater;
@@ -37,6 +38,14 @@ public class Serving extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_serving, container, false);
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        Reader reader = Reader.getInstance();
+        fragmentTransaction.add(R.id.container_reader, reader);
     }
 
 

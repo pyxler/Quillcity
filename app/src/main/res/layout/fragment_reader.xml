@@ -3,9 +3,19 @@
     android:layout_height="match_parent" tools:context="Fragment.Reader">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
-    
+    <TextView
+        android:id="@+id/reader_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <TextView
+        android:id="@+id/reader_poem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/reader_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </FrameLayout>

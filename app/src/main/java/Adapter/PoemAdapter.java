@@ -30,7 +30,7 @@ public class PoemAdapter extends ArrayAdapter<Poem> {
         mPoems = poems;
 
     }
-
+    @Override
     public View getView (int position, View convertView, ViewGroup parent){
         View rowView = convertView;
 
