@@ -11,7 +11,10 @@ public class Poem {
     private double mLat;
     private double mLong;
 
-    public Poem(){
+    //mock constructor
+    public Poem(String Author, String Text){
+        mAuthor = mAuthor;
+        mPoem = Text;
 
     }
 

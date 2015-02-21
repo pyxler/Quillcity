@@ -6,11 +6,13 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.peter.myapplication.R;
 
 import java.util.ArrayList;
 
+import Adapter.PoemAdapter;
 import Model.Poem;
 
 /**
@@ -51,6 +53,21 @@ public class QuillList extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
+
+        //DEMO
+        mPoems.add(new Poem("Shakespeare", "All the world's a stage and all the men and women merely players"));
+        mPoems.add(new Poem("Balzac", "Notre soleil s'est couché, nous avons tous froid maintenant." ));
+
+        //Declares ListView
+        ListView listView = (ListView) getActivity().findViewById(R.id.quill_listview);
+
+
+        //Initialises Adapter
+        PoemAdapter adapter = new PoemAdapter(getActivity(), mPoems);
+
+        //sets Adapter
+        listView.setAdapter(adapter);
+
     }
 
 
