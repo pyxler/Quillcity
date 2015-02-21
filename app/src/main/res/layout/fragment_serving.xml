@@ -3,15 +3,18 @@
     android:layout_height="match_parent" tools:context="Fragment.Serving">
 
     <TextView
-        android:text="@string/hello_world"/>
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <FrameLayout
-        android:id="@+id/container_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@string/hello_world"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 <!--
     <FrameLayout
         android:id="@+id/container_reader"
         /> -->
-
 </android.support.v4.widget.SlidingPaneLayout>
