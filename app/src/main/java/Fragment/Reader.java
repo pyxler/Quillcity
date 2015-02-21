@@ -3,6 +3,7 @@ package Fragment;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,8 @@ public class Reader extends Fragment {
     private static Rating mRating;
 
     public static Reader getInstance(){
+        Log.d(null, "Reader instance called");
+
         if (instance==null){
             instance = new Reader();
         }
@@ -41,6 +44,12 @@ public class Reader extends Fragment {
 
     public static void setRating(Rating rating){
         mRating = rating;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceStates){
+        super.onCreate(savedInstanceStates);
+
     }
 
     @Override

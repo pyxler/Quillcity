@@ -8,6 +8,9 @@ import android.view.MenuItem;
 
 import com.example.peter.myapplication.R;
 
+import Fragment.BlankFragment;
+import Fragment.QuillList;
+import Fragment.Reader;
 import Fragment.Serving;
 
 public class MainActivity extends Activity {
@@ -20,12 +23,13 @@ public class MainActivity extends Activity {
         /* Set up Serving Fragment*/
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        BlankFragment reader = new BlankFragment();
+        fragmentTransaction.add(R.id.container_reader, reader);
 
-        Serving serving = Serving.getInstance();
+        FragmentTransaction fragmentTransaction2 = getFragmentManager().beginTransaction();
+        QuillList qlist = QuillList.getInstance();
+        fragmentTransaction2.add(R.id.container_list, qlist);
 
-        fragmentTransaction.add(R.id.container_serving, serving);
-
-        fragmentTransaction.commit();
     }
 
 

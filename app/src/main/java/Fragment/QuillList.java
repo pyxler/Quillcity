@@ -3,6 +3,7 @@ package Fragment;
 
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,10 +33,14 @@ public class QuillList extends Fragment {
     /* Fragment States and related */
 
     public static QuillList getInstance(){
+
+        Log.d(null, "Quill instance called");
+
         if(instance == null)
             instance = new QuillList();
 
         return instance;
+
     }
 
     public QuillList() {
@@ -46,6 +51,18 @@ public class QuillList extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_quilllist, container, false);
+
+
+    }
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState){
+        super.onActivityCreated(savedInstanceState);
+
         //DEMO
         mPoems.add(new Poem("Shakespeare", "All the world's a stage and all the men and women merely players"));
         mPoems.add(new Poem("Balzac", "Notre soleil s'est couché, nous avons tous froid maintenant." ));
@@ -59,16 +76,6 @@ public class QuillList extends Fragment {
 
         //sets Adapter
         listView.setAdapter(adapter);
-
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_quilllist, container, false);
-
-
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState){
-        super.onActivityCreated(savedInstanceState);
 
 
 
