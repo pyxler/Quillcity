@@ -14,6 +14,11 @@
             android:exported="true"
             android:label="@string/title_activity_main" >
         </activity>
+        <dependency>
+            <groupId>com.google.apis</groupId>
+            <artifactId>google-api-services-datastore-protobuf</artifactId>
+            <version>v1beta2-rev1-2.1.0</version>
+        </dependency>
     </application>
 
 </manifest>

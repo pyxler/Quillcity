@@ -39,6 +39,15 @@
     <orderEntry type="library" exported="" name="appengine-endpoints-deps-1.9.14" level="project" />
     <orderEntry type="library" exported="" name="servlet-api-2.5" level="project" />
     <orderEntry type="library" exported="" name="appengine-api-1.0-sdk-1.9.14" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../war/jdo2-api-2.3-ea.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
 
